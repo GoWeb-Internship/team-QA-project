@@ -3,6 +3,7 @@ import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import { GatsbySeo, ArticleJsonLd } from 'gatsby-plugin-next-seo'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Breadcrumb from '../components/Breadcrumb'
 
 import { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
@@ -14,6 +15,7 @@ const ComponentTemplate = ({ data }) => {
   return (
     // не обгорнуто в компонент Layout так як використовується плагін gatsby-plugin-layout
     <div className="w-full">
+      <Breadcrumb title={title} name={'Компоненти та функціональність'} />
       <div className="space-y-4 text-left">
         <h1 className="text-3xl leading-12 text-gray-800 lg:text-4xl lg:leading-14 mb-2">
           {title}
