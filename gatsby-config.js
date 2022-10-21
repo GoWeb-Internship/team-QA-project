@@ -28,7 +28,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-transformer-remark',
-    'gatsby-plugin-react-helmet',
+
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
@@ -220,7 +220,7 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`uk`, `ru`, `en`],
         defaultLanguage: `uk`,
-        generateDefaultLanguagePage: '/uk',
+        generateDefaultLanguagePage: true,
         redirect: true,
         siteUrl: '',
 

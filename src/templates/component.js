@@ -11,6 +11,8 @@ import Breadcrumb from '../components/Breadcrumb'
 
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
+import { useTranslation } from 'gatsby-plugin-react-i18next'
+
 const ComponentTemplate = ({ data }) => {
   // const { title } = data.markdownRemark.frontmatter
   // const { html } = data.markdownRemark
