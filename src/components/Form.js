@@ -8,7 +8,7 @@ import 'react-notifications/lib/notifications.css'
 
 const schema = yup
   .object({
-    name: yup.string().trim().required().min(3).max(100),
+    name: yup.string().trim().required().min(2).max(100),
     email: yup
       .string()
       .email()
