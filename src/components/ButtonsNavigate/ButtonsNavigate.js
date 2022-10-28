@@ -39,6 +39,7 @@ const ButtonsNavigate = () => {
   const next = () => {
     navigation(currentIndex + 1);
   };
+  
   return (
     <div className={s.wrapper}>
       <button
