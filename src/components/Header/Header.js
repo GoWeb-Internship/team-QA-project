@@ -44,10 +44,10 @@ export const Header = ({
         <Logo
           className={
             mobileOpen
-              ? ' block  h-8 w-[100px]'
+              ? 'block h-8 w-[100px]'
               : menuCollapsed
               ? 'h-4 w-[50px]'
-              : 'mb-0 block  h-8 w-[100px]'
+              : 'mb-0 mr-auto inline-block h-8 w-[100px]'
           }
           title="Go-It"
         />
@@ -56,6 +56,7 @@ export const Header = ({
       <SearchBtnOpenModal
         menuCollapsed={menuCollapsed}
         mobileOpen={mobileOpen}
+        setMobileOpen={setMobileOpen}
       />
     </div>
   );
