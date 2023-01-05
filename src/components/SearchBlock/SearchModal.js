@@ -35,6 +35,7 @@ export const SearchModal = ({
   searchQuery,
   setSearchQuery,
   onClsClick,
+  setMobileOpen,
 }) => {
   const [pagesIndexStore, setPagesIndexStore] = useState(null);
   const dataFull = useStaticQuery(queryFull);
@@ -103,6 +104,7 @@ export const SearchModal = ({
                   <div>
                     <SearchResult
                       onClick={closeModal}
+                      setMobileOpen={setMobileOpen}
                       searchQuery={searchQuery}
                       pagesIndexStore={pagesIndexStore}
                     />

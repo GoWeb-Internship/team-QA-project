@@ -3,7 +3,12 @@ import SearchResultItem from './SearchResultItem';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import * as s from './Search.module.css';
 
-function SearchResult({ searchQuery, pagesIndexStore, onClick }) {
+function SearchResult({
+  searchQuery,
+  pagesIndexStore,
+  onClick,
+  setMobileOpen,
+}) {
   const { t, i18n } = useTranslation();
   const { notFoundTitle, notFoundText } = t('search', {
     returnObjects: true,
@@ -52,6 +57,7 @@ function SearchResult({ searchQuery, pagesIndexStore, onClick }) {
                   page={res}
                   query={searchQuery}
                   onClick={onClick}
+                  setMobileOpen={setMobileOpen}
                 />
               );
             }

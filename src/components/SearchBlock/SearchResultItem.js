@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import * as s from './Search.module.css';
 
-function SearchResultItem({ page, query, onClick }) {
+function SearchResultItem({ page, query, onClick, setMobileOpen }) {
+  const breakpoint = useBreakpoint();
   function subRes(str1, str2, query) {
     if (str1.includes(query)) {
       return subStrWithSearchQuery(str1, query);
@@ -29,7 +31,9 @@ function SearchResultItem({ page, query, onClick }) {
 
   return (
     <Link
-      onClick={()=> onClick()}
+      onClick={() => {
+        onClick(), breakpoint.sm && setMobileOpen(false);
+      }}
       to={`${page.fields.slug}`}
       className={s.searchResultItemLink}
     >
